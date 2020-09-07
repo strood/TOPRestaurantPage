@@ -1,3 +1,3 @@
-// let body = document.getElementById('content');
-//
-// body.innerHTML = "My Site";
+let body = document.querySelector('body');
+
+body.innerHTML = "My Site";
