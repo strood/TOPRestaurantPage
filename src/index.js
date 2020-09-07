@@ -1,3 +1,3 @@
-let body = document.getElementById('content');
-
-body.innerHTML = "Yo man, its my site!!";
+// let body = document.getElementById('content');
+//
+// body.innerHTML = "My Site";
