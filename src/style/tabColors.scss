@@ -1,0 +1,37 @@
+@import './colors.scss';
+
+.mdc-tab[id='mdc-tab-1'] {
+  @include mdc-tab-active-text-label-color($red);
+  @include mdc-tab-active-states-color($red);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($red);
+  }
+}
+
+.mdc-tab[id='mdc-tab-2'] {
+  @include mdc-tab-active-text-label-color($purple);
+  @include mdc-tab-active-states-color($purple);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($purple);
+  }
+}
+
+.mdc-tab[id='mdc-tab-3'] {
+  @include mdc-tab-active-text-label-color($blue);
+  @include mdc-tab-active-states-color($blue);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($blue);
+  }
+}
+
+.mdc-tab[id='mdc-tab-4'] {
+  @include mdc-tab-active-text-label-color($green);
+  @include mdc-tab-active-states-color($green);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($green);
+  }
+}

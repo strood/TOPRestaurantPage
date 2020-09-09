@@ -11,7 +11,7 @@ const {
 // Used to add vendor-specific styles to Sass files, config w PostCSS-loader
 const autoprefixer = require('autoprefixer');
 
-const myOtherPostcssPlugin = require('postcss-my-plugin');
+
 
 module.exports = {
   // Added only for dev! dont need below line:
@@ -58,7 +58,6 @@ module.exports = {
             options: {
               postcssOptions: {
                 plugins: [
-                  'postcss-present-env',
                   autoprefixer(),
                 ],
               },

@@ -2,7 +2,7 @@ import navLoad from './navLoad';
 import {MDCTabBar} from '@material/tab-bar';
 import {MDCTab} from '@material/tab';
 import Background from './img/tribeheader.jpg';
-import MobileBackground from './img/tribeheadermob.png';
+import MobileBackground from './img/tribeheadermobile.png';
 
 const pageLoad = () => {
   // Setup main container
@@ -10,8 +10,6 @@ const pageLoad = () => {
   const content = document.createElement('main');
   content.setAttribute('id', 'content');
   body.appendChild(content);
-
-
 
   // Setup nav/tab Bar
   navLoad(content);
@@ -39,6 +37,8 @@ const pageLoad = () => {
       homeBackground.src = MobileBackground;
       heroContainer.appendChild(homeBackground);
       heroTextDiv.remove();
+      const heroTextAlt = document.createElement('p');
+
 
     } else {
       homeBackground.src = Background;
@@ -61,7 +61,7 @@ const pageLoad = () => {
     heroContainer.appendChild(heroTextDiv);
   }
 
-  body.appendChild(heroContainer);
+  content.appendChild(heroContainer);
 
   // setup footer container
 
