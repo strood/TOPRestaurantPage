@@ -8,6 +8,11 @@ const {
   CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
+// Used to add vendor-specific styles to Sass files, config w PostCSS-loader
+const autoprefixer = require('autoprefixer');
+
+const myOtherPostcssPlugin = require('postcss-my-plugin');
+
 module.exports = {
   // Added only for dev! dont need below line:
   mode: 'development',
@@ -40,13 +45,40 @@ module.exports = {
   module: {
     rules: [{
         test: /\.s[ac]ss$/i,
-        use: [
-          // Creates `style` nodes from JS strings
-          'style-loader',
-          // Translates CSS into CommonJS
-          'css-loader',
-          // Compiles Sass to CSS
-          'sass-loader',
+        use: [{
+            // Creates `style` nodes from JS strings
+            loader: 'style-loader',
+          },
+          {
+            // Translates CSS into CommonJS
+            loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              postcssOptions: {
+                plugins: [
+                  'postcss-present-env',
+                  autoprefixer(),
+                ],
+              },
+            },
+          },
+          {
+            // Compiles Sass to CSS
+            loader: 'sass-loader',
+            options: {
+              sassOptions: {
+                includePaths: ['./node_modules'],
+              },
+              // Prefer Dart Sass
+              implementation: require('sass'),
+
+              // See https://github.com/webpack-contrib/sass-loader/issues/804
+              webpackImporter: false,
+            },
+          }
+
         ],
       },
       {

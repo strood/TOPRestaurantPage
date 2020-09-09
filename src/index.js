@@ -1,3 +1,6 @@
-let body = document.querySelector('body');
+import pageLoad from './pageLoad';
 
-body.innerHTML = "My Site";
+import './style/base.scss';
+import './style/style.scss';
+
+pageLoad();

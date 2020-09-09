@@ -1,0 +1,92 @@
+@import "@material/tab-bar/mdc-tab-bar";
+@import "@material/tab-scroller/mdc-tab-scroller";
+@import "@material/tab-indicator/mdc-tab-indicator";
+@import "@material/tab/mdc-tab";
+$red: rgb(164,17,9);
+$green: rgb(218,194,0);
+$blue: rgb(4,91,163);
+$purple: rgb(143, 0, 102);
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+.mdc-tab[id='mdc-tab-1'] {
+  @include mdc-tab-active-text-label-color($red);
+  @include mdc-tab-active-states-color($red);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($red);
+  }
+}
+
+.mdc-tab[id='mdc-tab-2'] {
+  @include mdc-tab-active-text-label-color($purple);
+  @include mdc-tab-active-states-color($purple);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($purple);
+  }
+}
+
+.mdc-tab[id='mdc-tab-3'] {
+  @include mdc-tab-active-text-label-color($blue);
+  @include mdc-tab-active-states-color($blue);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($blue);
+  }
+}
+
+.mdc-tab[id='mdc-tab-4'] {
+  @include mdc-tab-active-text-label-color($green);
+  @include mdc-tab-active-states-color($green);
+
+  .mdc-tab-indicator {
+    @include mdc-tab-indicator-underline-color($green);
+  }
+}
+
+body,
+html {
+  // bottom: 0;
+
+  .hero-container {
+    width: 100vw;
+    height: 80vh;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .hero-text-div {
+    background-color: rgba(0,0,0,0);
+    position: absolute;
+    height: 150px;
+    width: 600px;
+    left: 10%;
+    bottom: 35%;
+    font-size: 25px;
+    font-weight: light;
+    font-family: "Roboto",Arial,sans-serif;
+  }
+
+  .hero-text {
+    font-family: Helvetica, Verdana;
+    color: #FFF;
+    z-index: 200;
+  }
+}
+
+
+@media all and (max-width: $tablet-width) {
+    .hero-container {
+      width: 100%;
+
+    }
+    .hero-text {
+      width: 80vw;
+
+    }
+}
