@@ -4,51 +4,68 @@
 @import "@material/tab/mdc-tab";
 @import "./tabColors";
 @import "./colors";
-
 $tablet-width: 768px;
-$desktop-width: 800px;
+$desktop-width: 1500px;
 
-body,
 html {
+  height: 100%;
+}
+body {
+  width: 100vw;
+  height: 100%;
+}
 
-  .hero-container {
-    width: 100vw;
-    height: 80vh;
-    position: relative;
+.hero-container {
+  width: 100vw;
+  height: 80vh;
+  position: relative;
 
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-
-  .hero-text-div {
-    background-color: rgba(0,0,0,0);
-    position: absolute;
-    height: 150px;
-    width: 600px;
-    left: 10%;
-    bottom: 35%;
-    font-size: 25px;
-    font-family: "Fjalla One",Arial,sans-serif;
-
-  }
-
-  .hero-text {
-    font-family: Helvetica, Verdana;
-    color: #FFF;
-    z-index: 200;
+  img {
+    width: 100%;
+    height: 100%;
   }
 }
 
+.hero-text-div {
+  background-color: rgba(0,0,0,0);
+  position: absolute;
+  height: 150px;
+  width: 600px;
+  left: 10%;
+  bottom: 35%;
+  font-size: 25px;
+  font-family: "Fjalla One",Arial,sans-serif;
+}
 
+.hero-text {
+  font-family: Helvetica, Verdana;
+  color: #FFF;
+  z-index: 200;
+}
 @media all and (max-width: $tablet-width) {
-    .hero-container {
+    #content {
       width: 100%;
+  }
 
-    }
-    .hero-text {
-      width: 80vw;
+  .hero-text {
+    width: 56vw;
+    font-size: 22px;
+  }
 
-    }
+  .hero-text-div {
+    left: 1%;
+    bottom: 40%;
+    width: 100%;
+  }
+}
+@media all and (min-width: $desktop-width) {
+  #content {
+    // width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-container {
+    width: 1500px;
+  }
 }

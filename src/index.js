@@ -1,9 +1,9 @@
 // Import methods/functionality
-import pageLoad from './pageLoad';
+import homeLoad from './homeLoad';
 
 // Import styles
 import './style/base.scss';
 import './style/style.scss';
 
 //
-document.onload = pageLoad();
+document.onload = homeLoad();
