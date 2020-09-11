@@ -1,22 +1,24 @@
+// Build a nav tab w given name and index
 const makeTab = (name, index) => {
+  // Build basic button /w attributes, set index to given index
   let tab = document.createElement('button');
   tab.setAttribute('class', 'mdc-tab');
   tab.setAttribute('role', 'tab');
   tab.setAttribute('tabindex', index);
 
+  // content container
   let tabContent = document.createElement('span');
   tabContent.setAttribute('class', 'mdc-tab__content');
 
-  let tabIcon = document.createElement('span');
-  tabIcon.setAttribute('class', 'mdc-tab__icon');
-
+  // Tab text, set tab name
   let tabText = document.createElement('span');
   tabText.setAttribute('class', 'mdc-tab__text-label');
-
   tabText.innerHTML = name;
 
+  // Add text to content
   tabContent.appendChild(tabText);
 
+  // Additonal tab design elements, building and adding required attributes
   let tabIndicator = document.createElement('span');
   tabIndicator.setAttribute('class', 'mdc-tab-indicator');
 
@@ -27,10 +29,12 @@ const makeTab = (name, index) => {
   let tabRipple = document.createElement('span');
   tabRipple.setAttribute('class', 'mdc-tab__ripple');
 
+  // Put all the elements together on a tab
   tab.appendChild(tabContent);
   tab.appendChild(tabIndicator);
   tab.appendChild(tabRipple);
 
+  // return the completed tab 
   return tab;
 }
 

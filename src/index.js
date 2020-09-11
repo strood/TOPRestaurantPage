@@ -1,9 +1,11 @@
 // Import methods/functionality
-import homeLoad from './homeLoad';
+import pageLoad from './pageLoad';
 
 // Import styles
-import './style/base.scss';
+import './style/reset.scss';
 import './style/style.scss';
 
-//
-document.onload = homeLoad();
+
+// On initial page load, do our default setup, which will choose our landing page
+// and add listeners for further nav
+document.onload = pageLoad();

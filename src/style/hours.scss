@@ -1,0 +1,33 @@
+
+.hero-text-div {
+  height: 150px;
+  width: 600px;
+  bottom: 35%;
+}
+
+.hero-text {
+  font-family: Helvetica, Verdana;
+  color: #FFF;
+  z-index: 200;
+}
+
+@media all and (max-width: $tablet-width) {
+  .hero-container {
+    height: 95vh;
+  }
+  .hero-text {
+    width: 56vw;
+    max-height: 100%;
+    font-size: 22px;
+  }
+
+  .hero-text-div {
+    bottom: 50%;
+    width: 100%;
+  }
+}
+@media all and (min-width: $desktop-width) {
+  .hero-container {
+    width: 1500px;
+  }
+}
