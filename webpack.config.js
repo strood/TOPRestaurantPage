@@ -30,6 +30,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Tribe | eat a little, drink a little, flirt a little, tell awesome stories.',
+      favicon: "./src/img/1599847804.ico",
     }),
     // Added for second plugin, the option Tells CleanWebpackPlugin that we don't
     // want to remove the index.html file after the incremental build triggered by watch

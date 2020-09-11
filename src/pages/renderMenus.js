@@ -1,14 +1,14 @@
-import renderFrame from './renderFrame';
+import Background from '../img/tribeheaderclip.png';
+import buildHero from '../components/heroImage';
+
 
 const renderMenus = (content) => {
-  // Render new frame for content
-  let frame = renderFrame();
+  // Set our text for our hours page
+  const heroText = "MENUS";
+  const heroURL = Background;
 
-  //
-  frame.innerHTML = "Incomplete feature - Menu Page";
-
-  // Append newly made frame to content
-  content.appendChild(frame)
+  // Builds a hero element with the text, background image, and appends to our content
+  buildHero(heroText, heroURL, content);
 }
 
 export default renderMenus;

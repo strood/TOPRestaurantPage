@@ -10,10 +10,12 @@ const pageLoad = () => {
   const body = document.querySelector('body');
   // navLoad will setup listener and navbar, we will activate once page setup below.
   navLoad(body);
-  // Main content body
+  // Main content body --TODO: Turn this *make main* action into constructor
   const content = document.createElement('main');
   content.setAttribute('id', 'content');
   body.appendChild(content);
+
+  // footerLoad(body); --TODO - implement footer add
 
   // Add listener to body that will call our display controller when it hears
   // a tab activated event and pass along info from event

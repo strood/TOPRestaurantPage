@@ -3,26 +3,29 @@ import renderHours from './pages/renderHours';
 import renderMenus from './pages/renderMenus';
 import renderManifesto from './pages/renderManifesto';
 import renderContact from './pages/renderContact';
-import clearFrame from './clearFrame';
+import clearContent from './clearContent';
 
 // Given the index of the page, call approproate render function, passing
 // in the main body content it will render to.
 const displayController = (index) => {
-  const content = document.querySelector('#content');
-  // Frames exist in content to hold info, remove current frame to render new
-  clearFrame(content);
+
+  // Reset #content for new page, returns our new content section
+  const body = document.querySelector('body');
+  let newContent = clearContent(body);
+
+  // Render page based on index
   switch (index) {
     case (0):
-      renderHours(content);
+      renderHours(newContent);
       break;
     case (1):
-      renderMenus(content);
+      renderMenus(newContent);
       break;
     case (2):
-      renderManifesto(content);
+      renderManifesto(newContent);
       break;
     case (3):
-      renderContact(content);
+      renderContact(newContent);
       break;
   }
 }

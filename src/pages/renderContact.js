@@ -1,15 +1,14 @@
-import renderFrame from './renderFrame';
-
+import Background from '../img/tribeheader.jpg';
+import buildHero from '../components/heroImage';
 
 const renderContact = (content) => {
-  // Render new frame for content
-  let frame = renderFrame();
+  // Set our text for our hours page
+  const heroText = "contact!";
+  const heroURL = Background;
 
-  //
-  frame.innerHTML = "Incomplete feature -  Contact Page";
+  // Builds a hero element with the text, background image, and appends to our content
+  buildHero(heroText, heroURL, content);
 
-  // Append newly made frame to content
-  content.appendChild(frame)
 
 }
 

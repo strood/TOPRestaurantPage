@@ -5,25 +5,16 @@ html {
 body {
   width: 100%;
   height: 100%;
-}
-
-.frame {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-@media all and (max-width: $tablet-width) {
-  //   #content {
-  //     width: 100%;
-  // }
-}
-@media all and (min-width: $desktop-width) {
-  // #content {
-  //   display: flex;
-  //   flex-direction: column;
-  //   align-items: center;
-  // }
+#content {
+  max-width: 1500px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  // justify-content: center;
 }

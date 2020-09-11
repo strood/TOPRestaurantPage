@@ -1,14 +1,13 @@
-import renderFrame from './renderFrame';
+import Background from '../img/tribeheader.jpg';
+import buildHero from '../components/heroImage';
 
 const renderManifesto = (content) => {
-  // Render new frame for content
-  let frame = renderFrame();
+  // Set our text for our hours page
+  const heroText = "Manifesto!";
+  const heroURL = Background;
 
-  //
-  frame.innerHTML = "Incomplete feature - Manifesto Page";
-
-  // Append newly made frame to content
-  content.appendChild(frame)
+  // Builds a hero element with the text, background image, and appends to our content
+  buildHero(heroText, heroURL, content);
 
 }
 
