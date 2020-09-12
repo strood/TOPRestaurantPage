@@ -8,6 +8,11 @@ import {
 import {
   changeFooterColor
 } from '../components/footer';
+import renderLogo from '../components/renderLogo';
+import {
+  colorPicker,
+} from '../components/colors';
+
 
 
 
@@ -23,8 +28,14 @@ const renderMenus = (content) => {
   // render article
   renderArticle(content);
 
+  let article = document.querySelector('article');
 
-  changeFooterColor(`rgb(143, 0, 102)`);
+
+  // Add logo to bottom of page
+  renderLogo(article);
+
+
+  changeFooterColor(colorPicker(2));
 
 }
 

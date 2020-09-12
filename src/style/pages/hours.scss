@@ -1,1 +1,22 @@
+.hours-article {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 3%;
+  .article-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h3 {
+      font-size: 30px;
+    }
+  }
+}
 
+
+@media only screen and (max-width: 560px) {
+.hours-article {
+    flex-direction: column;
+  }
+}

@@ -8,6 +8,11 @@ import {
 import {
   changeFooterColor
 } from '../components/footer';
+import renderLogo from '../components/renderLogo';
+import {
+  colorPicker,
+} from '../components/colors';
+
 
 
 
@@ -22,7 +27,13 @@ const renderContact = (content) => {
   // Render article
   renderArticle(content);
 
-  changeFooterColor(`rgb(218,194,0)`);
+  let article = document.querySelector('article');
+
+
+  // Add logo to bottom of page
+  renderLogo(article);
+
+  changeFooterColor(colorPicker(4));
 
 
 }

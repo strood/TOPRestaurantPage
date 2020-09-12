@@ -16,9 +16,14 @@ article {
   display: flex;
   h2 {
     font-size: 40px;
-    padding: 5%;
+    padding-left: 5%;
     padding-bottom: 3%;
+    padding-top: 3%;
   }
+  pre {
+    font-family: $main-font;
+  }
+
 }
 
 #content {
