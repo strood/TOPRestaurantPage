@@ -22,7 +22,7 @@ const renderMenus = (content) => {
   const heroURL = Background;
 
   // Builds a hero element with the text, background image, and appends to our content
-  renderHero(heroText, heroURL, content);
+  renderHero(heroText, heroURL, content, colorPicker(2));
 
 
   // render article

@@ -3,6 +3,7 @@ html {
   width: 100%;
   font-family: $main-font;
   font-weight: bold;
+  scroll-behavior: smooth;
 }
 body {
   width: 100%;
@@ -12,13 +13,19 @@ body {
   align-items: center;
 }
 
+.mdc-tab-bar {
+  position: fixed;
+  top: 0;
+  z-index:1;
+  background: white;
+}
+
 article {
   display: flex;
   h2 {
     font-size: 40px;
     padding-left: 5%;
     padding-bottom: 3%;
-    padding-top: 3%;
   }
   pre {
     font-family: $main-font;
@@ -27,6 +34,7 @@ article {
 }
 
 #content {
+  margin-top: 48px;
   max-width: 1400px;
   width: 100%;
   display: flex;

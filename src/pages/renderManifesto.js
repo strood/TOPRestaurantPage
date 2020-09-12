@@ -20,7 +20,7 @@ const renderManifesto = (content) => {
   const heroURL = Background;
 
   // Builds a hero element with the text, background image, and appends to our content
-  renderHero(heroText, heroURL, content);
+  renderHero(heroText, heroURL, content, colorPicker(3));
 
   // Render article
   renderArticle(content);
@@ -46,7 +46,7 @@ const renderManifesto = (content) => {
     `a little. Drink a little. Flirt a little. Tell your most awesome stories.`
 
   article.appendChild(text);
-  
+
   // Build agreement section
   renderArticleTitle('Agreement', colorPicker(3));
 

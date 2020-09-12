@@ -14,6 +14,8 @@ const displayController = (index) => {
   const body = document.querySelector('body');
   let newContent = clearContent(body);
 
+  // Scroll to top of page
+  window.scrollTo(0, 0);
   // Render page based on index
   switch (index) {
     case (0):
