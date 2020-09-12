@@ -22,10 +22,11 @@ body {
 
 article {
   display: flex;
+  font-size: 20px;
   h2 {
     font-size: 40px;
     padding-left: 5%;
-    padding-bottom: 3%;
+    padding-bottom: 2%;
   }
   pre {
     font-family: $main-font;

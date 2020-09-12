@@ -1,4 +1,7 @@
 import Background from '../img/hoursBackgroundClip.jpg';
+import buildHoursCard from '../components/buildHoursCard';
+import buildAddressCard from '../components/buildAddressCard';
+
 import {
   renderHero
 } from '../components/hero';
@@ -7,79 +10,40 @@ import {
 } from '../components/footer';
 import {
   renderArticle,
-  buildArticleCard,
 } from '../components/article';
 import renderLogo from '../components/renderLogo';
 import {
   colorPicker,
 } from '../components/colors';
 
-
+// Render hours page
 const renderHours = (content) => {
-
-  // Set our text for our hours page
+  // Set our hero vars for our hours page
+  const heroURL = Background;
   const heroText = "We are a contemporary restaurant with a mind to source" +
     " local, seasonal, ingredients to create food inspired from around the world. " +
     "Terry, Paul and Brandon are travellers and foodies. We love rich intense flavours, " +
     "fresh products, and spice, yet… we understand that we live in Red Deer and people here also enjoy comfort food.";
-  const heroURL = Background;
 
   // Builds a hero element with the text, background image, and appends to our content
   renderHero(heroText, heroURL, content, colorPicker(1));
 
-  // let hero = document.querySelector('.hero-image');
-  // hero.style.borderBottom = `3px solid ${colorPicker(1)}`;
-
-  // Render article element
+  // Render article element and grab it
   renderArticle(content);
-
   let article = document.querySelector('article');
-
   article.setAttribute('class', 'hours-article');
 
   // Create two cards, add them to artice.
 
   // Build address card
-  let addressText = document.createElement('pre');
-  addressText =
-  "       4930 Ross St.\n" +
-  "Red Deer, AB T4N 1X7\n" +
-  "\n" +
-  "            Phone:\n" +
-  "      403-392-3046\n" +
-  "            Email:\n" +
-  "eat@tribeflatout.com\n"
-
-
-  let addressCard = buildArticleCard('Address', addressText, colorPicker(1));
-  article.appendChild(addressCard);
+  buildAddressCard(article);
 
   // Build hours card
-  let hoursText = document.createElement('pre');
-  // hoursText =
-  // "   Tuesday 11:30 a.m. – 2:30 p.m.\n" +
-  // "    Wednesday 11:30 a.m. – LATE\n" +
-  // "     Thursday 11:30 a.m. – LATE\n" +
-  // "       Friday 11:30 a.m. – LATE\n" +
-  // "     Saturday 11:30 a.m. – LATE\n" +
-  // "\n" +
-  // "Happy Hour: 2:30 p.m. – 4:30 p.m.";
-
-  hoursText =
-  "                       Tuesday:\n" +
-  "           11:30 a.m. – 2:30 p.m.\n" +
-  "\n" +
-  "             Wed, Thurs, Fri, Sat:\n" +
-  "               11:30 a.m. – LATE\n" +
-  "\n" +
-  "Happy Hour: 2:30 p.m. – 4:30 p.m.";
-
-
-  let hoursCard = buildArticleCard('Hours', hoursText, colorPicker(1));
-  article.appendChild(hoursCard);
+  buildHoursCard(article);
 
   // Add logo to bottom of page
   renderLogo(content);
+
   // Change our footer color to our page color
   changeFooterColor(colorPicker(1));
 

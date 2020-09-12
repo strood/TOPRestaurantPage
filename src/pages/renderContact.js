@@ -24,17 +24,20 @@ const renderContact = (content) => {
   // Builds a hero element with the text, background image, and appends to our content
   renderHero(heroText, heroURL, content, colorPicker(4));
 
-  // Render article
+  // Render article element
   renderArticle(content);
-
   let article = document.querySelector('article');
+  article.setAttribute('class', 'contact-article');
 
+  // Make a card for call/email info, and one for message
+
+  // Insert google map into content so its width constrined
 
   // Add logo to bottom of page
   renderLogo(article);
 
+  // Change our footer color to our page color
   changeFooterColor(colorPicker(4));
-
 
 }
 

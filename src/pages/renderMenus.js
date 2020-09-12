@@ -17,7 +17,7 @@ import {
 
 
 const renderMenus = (content) => {
-  // Set our text for our hours page
+  // Set our hero vars for our menus page
   const heroText = "MENUS";
   const heroURL = Background;
 
@@ -27,8 +27,8 @@ const renderMenus = (content) => {
 
   // render article
   renderArticle(content);
-
   let article = document.querySelector('article');
+  article.setAttribute('class', 'menus-article');
 
 
   // Add logo to bottom of page
