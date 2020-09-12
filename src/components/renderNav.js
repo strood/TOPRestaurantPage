@@ -1,6 +1,6 @@
-import makeTab from './makeTab';
+import buildTab from './buildTab';
 
-const navLoad = (content) => {
+const renderNav = (content) => {
   // Construct a matrial-ui tab nav style navbar and add to content element
   // passed in
 
@@ -23,10 +23,10 @@ const navLoad = (content) => {
 
 
   // Build tabs for menu, passing in the tab name we want and index
-  let aboutTab = makeTab('hours', 0);
-  let menusTab = makeTab('menus', 1);
-  let manifestoTab = makeTab('manifesto', 2);
-  let contactTab = makeTab('contact', 3);
+  let aboutTab = buildTab('hours', 0);
+  let menusTab = buildTab('menus', 1);
+  let manifestoTab = buildTab('manifesto', 2);
+  let contactTab = buildTab('contact', 3);
 
 
   // Add new buttons to our
@@ -46,4 +46,4 @@ const navLoad = (content) => {
 
 }
 
-export default navLoad;
+export default renderNav;

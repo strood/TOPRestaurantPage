@@ -1,8 +1,9 @@
 // Imports
-import renderHours from './pages/renderHours';
-import renderMenus from './pages/renderMenus';
-import renderManifesto from './pages/renderManifesto';
-import renderContact from './pages/renderContact';
+import renderHours from '../pages/renderHours';
+import renderMenus from '../pages/renderMenus';
+import renderManifesto from '../pages/renderManifesto';
+import renderContact from '../pages/renderContact';
+
 import clearContent from './clearContent';
 
 // Given the index of the page, call approproate render function, passing

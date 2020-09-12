@@ -8,7 +8,8 @@ const clearContent = (body) => {
   // Build and add new contact, returning it so we can render in it
   const newContent = document.createElement('main');
   newContent.setAttribute('id', 'content');
-  body.appendChild(newContent);
+  let footer = document.querySelector('footer');
+  body.insertBefore(newContent, footer);
 
   return newContent;
 }

@@ -1,5 +1,5 @@
 // Import base vars
-@import "./vars";
+@import "./vars/vars";
 
 // External Components Styles
 @import "@material/tab-bar/mdc-tab-bar";
@@ -11,9 +11,12 @@
 @import "./base";
 
 // Internal Component styles
-@import "./colors";
-@import "./tabColors";
-@import "./hero.scss";
-//
-// // Page styles
-// @import "./hours";
+@import "./vars/colors";
+@import "./vars/tabColors";
+@import "./components/hero";
+@import "./components/footer";
+
+
+// Page styles
+@import "./pages/hours";
+@import "./pages/manifesto";

@@ -1,5 +1,6 @@
 // Imports
-import navLoad from './nav/navLoad';
+import renderNav from '../components/renderNav';
+import {renderFooter} from '../components/footer';
 import displayController from './displayController';
 import {MDCTabBar} from '@material/tab-bar';
 
@@ -8,14 +9,17 @@ import {MDCTabBar} from '@material/tab-bar';
 const pageLoad = () => {
   // Whole page holder
   const body = document.querySelector('body');
-  // navLoad will setup listener and navbar, we will activate once page setup below.
-  navLoad(body);
+
+  // renderNav will setup listener and navbar, we will activate once page setup below.
+  renderNav(body);
+
   // Main content body --TODO: Turn this *make main* action into constructor
   const content = document.createElement('main');
   content.setAttribute('id', 'content');
   body.appendChild(content);
 
-  // footerLoad(body); --TODO - implement footer add
+  // renderFooter will build and append footer to body element
+  renderFooter(body);
 
   // Add listener to body that will call our display controller when it hears
   // a tab activated event and pass along info from event
@@ -27,6 +31,7 @@ const pageLoad = () => {
   // Grab tabBar and activate our desired landing page (Hours in our case)
   const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
   tabBar.activateTab(0); //trigger default activate on load.
+
 }
 
 

@@ -1,5 +1,5 @@
 // Import methods/functionality
-import pageLoad from './pageLoad';
+import pageLoad from './controllers/pageLoad';
 
 // Import styles
 import './style/reset.scss';

@@ -1,5 +1,5 @@
 // Build a nav tab w given name and index
-const makeTab = (name, index) => {
+const buildTab = (name, index) => {
   // Build basic button /w attributes, set index to given index
   let tab = document.createElement('button');
   tab.setAttribute('class', 'mdc-tab');
@@ -38,4 +38,4 @@ const makeTab = (name, index) => {
   return tab;
 }
 
-export default makeTab;
+export default buildTab;

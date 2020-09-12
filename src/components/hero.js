@@ -1,5 +1,5 @@
 // Construct a hero image element and add to page
-const heroImage = (text, image, content) => {
+const renderHero = (text, image, content) => {
 
   // Build image background
   const imageDiv = document.createElement('div');
@@ -8,11 +8,17 @@ const heroImage = (text, image, content) => {
   // Build text
   const textDiv = document.createElement('div');
   textDiv.setAttribute('class', 'hero-text');
-  textDiv.innerHTML = text;
+  const title = document.createElement('h1');
 
+  title.innerHTML = text;
+  textDiv.appendChild(title)
   // Put together and append to content
   imageDiv.appendChild(textDiv);
+
   content.appendChild(imageDiv);
+
 }
 
-export default heroImage;
+export {
+  renderHero,
+}
