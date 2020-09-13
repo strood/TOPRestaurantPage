@@ -1,9 +1,7 @@
-// Imports
 import renderNav from '../components/renderNav';
 import {renderFooter} from '../components/footer';
 import displayController from './displayController';
 import {MDCTabBar} from '@material/tab-bar';
-
 
 // Basic page element setup, load nav and activate our landing page
 const pageLoad = (i = 0) => {
@@ -35,7 +33,4 @@ const pageLoad = (i = 0) => {
 
 }
 
-
-
-// Exports
 export default pageLoad;

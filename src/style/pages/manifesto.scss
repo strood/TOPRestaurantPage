@@ -1,12 +1,14 @@
 .manifesto-article {
   flex-direction: column;
   font-size: 20px;
-
+  h3 {
+    padding-left: 5%;
+    padding-bottom: 2%;
+  }
   p {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 1%;
-
   }
 
   ul {

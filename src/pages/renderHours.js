@@ -1,6 +1,6 @@
 import Background from '../img/hoursBackgroundClip.jpg';
-import buildHoursCard from '../components/buildHoursCard';
-import buildAddressCard from '../components/buildAddressCard';
+import buildHoursCard from '../components/builders/buildHoursCard';
+import buildAddressCard from '../components/builders/buildAddressCard';
 
 import {
   renderHero

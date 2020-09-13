@@ -1,7 +1,7 @@
 import Background from '../img/manifestoBackgroundClip.jpg';
 import renderLogo from '../components/renderLogo';
-import buildAboutUs from '../components/buildAboutUs';
-import buildAgreement from '../components/buildAgreement';
+import buildAboutUs from '../components/builders/buildAboutUs';
+import buildAgreement from '../components/builders/buildAgreement';
 import {
   renderHero
 } from '../components/hero';

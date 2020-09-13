@@ -13,9 +13,7 @@ import {
   colorPicker,
 } from '../components/colors';
 
-
-
-
+// Render menus page
 const renderMenus = (content) => {
   // Set our hero vars for our menus page
   const heroText = "MENUS";
@@ -24,8 +22,7 @@ const renderMenus = (content) => {
   // Builds a hero element with the text, background image, and appends to our content
   renderHero(heroText, heroURL, content, colorPicker(2));
 
-
-  // render article
+  // render article and grab it
   renderArticle(content);
   let article = document.querySelector('article');
   article.setAttribute('class', 'menus-article');
@@ -34,7 +31,7 @@ const renderMenus = (content) => {
   // Add logo to bottom of page
   renderLogo(article);
 
-
+  // Update footer color
   changeFooterColor(colorPicker(2));
 
 }

@@ -1,11 +1,13 @@
 import {
   buildArticleCard,
-} from './article';
+} from '../article';
 import {
   colorPicker,
-} from '../components/colors';
+} from '../colors';
 
+// Build hours card for hours page, append to given article
 const buildHoursCard = (article) => {
+  // Create text elements
   let hoursText = document.createElement('pre');
   hoursText =
     "                       Tuesday:\n" +
@@ -17,8 +19,10 @@ const buildHoursCard = (article) => {
     "Happy Hour: 2:30 p.m. – 4:30 p.m.";
 
 
-  let hoursCard = buildArticleCard('Hours', hoursText, colorPicker(1));
+  // Build and append card
+  let hoursCard = buildArticleCard('- Hours -', hoursText, colorPicker(1));
   article.appendChild(hoursCard);
+
 }
 
 export default buildHoursCard;

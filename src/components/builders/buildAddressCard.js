@@ -1,11 +1,13 @@
 import {
   buildArticleCard,
-} from './article';
+} from '../article';
 import {
   colorPicker,
-} from '../components/colors';
+} from '../colors';
 
+// Build address card for hours page, append to given article
 const buildAddressCard = (article) => {
+  // Create text elements
   let addressText = document.createElement('pre');
   addressText =
     "       4930 Ross St.\n" +
@@ -16,9 +18,10 @@ const buildAddressCard = (article) => {
     "            Email:\n" +
     "eat@tribeflatout.com\n"
 
-
-  let addressCard = buildArticleCard('Address', addressText, colorPicker(1));
+  // Build and append card
+  let addressCard = buildArticleCard('- Address -', addressText, colorPicker(1));
   article.appendChild(addressCard);
+
 }
 
 export default buildAddressCard;
