@@ -1,29 +1,35 @@
 import {
   colorPicker,
 } from '../colors';
-import {MDCTextField} from '@material/textfield';
+import {
+  MDCTextField
+} from '@material/textfield';
+import {
+  buildInput,
+  buildTextArea,
+} from './buildInput';
 
 const buildMessageCard = (content) => {
   // Build and set component attributes
-  const label = document.createElement('label');
-  label.setAttribute('class', 'mdc-text-field');
-  const rippleSpan = document.createElement('span');
-  rippleSpan.setAttribute('class', 'mdc-text-field__ripple');
-  const input = document.createElement('input');
-  input.setAttribute('class', '"mdc-text-field__input"');
-  const labelSpan = document.createElement('span');
-  labelSpan.setAttribute('class', 'mdc-floating-label');
-  const lineRipple = document.createElement('span');
-  lineRipple.setAttribute('class', 'mdc-line-ripple');
+  let form = document.createElement('form');
+  form.setAttribute('class', 'contact-form');
 
-  label.appendChild(rippleSpan);
-  label.appendChild(input);
-  label.appendChild(labelSpan);
-  label.appendChild(lineRipple);
+  let nameInput = buildInput('name');
+  let emailInput = buildInput('email');
+  let messageInput = buildTextArea('message');
 
-  content.appendChild(label);
-  console.log(label)
-  const textField = new MDCTextField(label);
+  console.log(nameInput)
+  console.log(emailInput)
+  console.log(messageInput)
+
+
+  form.appendChild(nameInput);
+  form.appendChild(emailInput);
+  form.appendChild(messageInput);
+
+  content.appendChild(form);
+  console.log(form)
+
 
 
 }
