@@ -11,8 +11,6 @@ const {
 // Used to add vendor-specific styles to Sass files, config w PostCSS-loader
 const autoprefixer = require('autoprefixer');
 
-
-
 module.exports = {
   // Added only for dev! dont need below line:
   mode: 'development',

@@ -1,33 +1,33 @@
-import {MDCTextField} from '@material/textfield';
-
 const buildInput = (name) => {
-
-
+  // Build components and set attributes
   const label = document.createElement('label');
   label.setAttribute('class', 'mdc-text-field mdc-text-field--filled');
-
   const rippleSpan = document.createElement('span');
   rippleSpan.setAttribute('class', 'mdc-text-field__ripple');
   const input = document.createElement('input');
   input.setAttribute('class', 'mdc-text-field__input');
   input.setAttribute('type', 'text');
+  input.setAttribute('aria-labelledby', 'my-label-id');
   const labelSpan = document.createElement('span');
   labelSpan.setAttribute('class', 'mdc-floating-label');
-  // const lineRipple = document.createElement('span');
-  // lineRipple.setAttribute('class', 'mdc-line-ripple');
+  labelSpan.id = 'my-label-id';
+  labelSpan.innerHTML = `${name}`;
+  const lineRipple = document.createElement('span');
+  lineRipple.setAttribute('class', 'mdc-line-ripple');
 
 
-  label.appendChild(rippleSpan);
+  // label.appendChild(rippleSpan);
   label.appendChild(input);
   label.appendChild(labelSpan);
-  // label.appendChild(lineRipple);
-  let textField = new MDCTextField(label);
+  label.appendChild(lineRipple);
 
-  console.log(textField)
 
-  return label
+  return label;
 
 }
+
+
+
 
 const buildTextArea = (name) => {
 
@@ -53,10 +53,6 @@ const buildTextArea = (name) => {
     label.appendChild(input);
     label.appendChild(labelSpan);
     // label.appendChild(lineRipple);
-
-    let textField = new MDCTextField(label);
-
-    console.log(textField)
 
     return label
 }
