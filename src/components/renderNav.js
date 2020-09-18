@@ -1,4 +1,4 @@
-import buildTab from './buildTab';
+import buildTab from './builders/buildTab';
 
 const renderNav = (content) => {
   // Construct a matrial-ui tab nav style navbar and add to content element

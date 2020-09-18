@@ -11,8 +11,6 @@ const {
 // Used to add vendor-specific styles to Sass files, config w PostCSS-loader
 const autoprefixer = require('autoprefixer');
 
-
-
 module.exports = {
   // Added only for dev! dont need below line:
   mode: 'development',
@@ -29,7 +27,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Tribe | eat a little, drink a little, flirt a little, tell awesome stories.',
+      title: 'tribe | Eat a little. Drink a little. Flirt a little. Tell your most awesome stories.',
       favicon: "./src/img/1599847804.ico",
     }),
     // Added for second plugin, the option Tells CleanWebpackPlugin that we don't

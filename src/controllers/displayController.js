@@ -3,6 +3,7 @@ import renderHours from '../pages/renderHours';
 import renderMenus from '../pages/renderMenus';
 import renderManifesto from '../pages/renderManifesto';
 import renderContact from '../pages/renderContact';
+import updateURL from './updateURL';
 
 import clearContent from './clearContent';
 
@@ -16,19 +17,24 @@ const displayController = (index) => {
 
   // Scroll to top of page
   window.scrollTo(0, 0);
-  // Render page based on index
+
+  // Render page based on index, update url to tab name
   switch (index) {
     case (0):
       renderHours(newContent);
+      updateURL(index);
       break;
     case (1):
       renderMenus(newContent);
+      updateURL(index);
       break;
     case (2):
       renderManifesto(newContent);
+      updateURL(index);
       break;
     case (3):
       renderContact(newContent);
+      updateURL(index);
       break;
   }
 }

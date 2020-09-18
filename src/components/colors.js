@@ -8,13 +8,12 @@ const purple = "rgb(143,0,102)";
 const grey = "rgb(102,102,102)";
 
 const tabColors = [red, purple, blue, green];
-// tabColors.concat([red, purple, blue, green]);
 
-const colors = tabColors + [grey];
+const allColors = tabColors + [grey];
 
 // Return full list of colors
 const colorList = () => {
-  return colors;
+  return allColors;
 }
 
 // Will be for quick color picking based on tab, 1-4.

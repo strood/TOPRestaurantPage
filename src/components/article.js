@@ -23,7 +23,7 @@ const buildArticleCard = (title, text, color) => {
 // Append title to artice object.
 const renderArticleTitle = (text, color) => {
   let article = document.querySelector('article');
-  let title = document.createElement('h2');
+  let title = document.createElement('h3');
 
   title.innerHTML = " - " + text + " - ";
   title.style.color = color;

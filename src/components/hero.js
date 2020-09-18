@@ -10,12 +10,11 @@ const renderHero = (text, image, content, color) => {
   const textDiv = document.createElement('div');
   textDiv.setAttribute('class', 'hero-text');
   const title = document.createElement('h1');
-
   title.innerHTML = text;
   textDiv.appendChild(title)
+
   // Put together and append to content
   imageDiv.appendChild(textDiv);
-
   content.appendChild(imageDiv);
 
 }

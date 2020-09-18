@@ -7,12 +7,18 @@
 @import "@material/tab-indicator/mdc-tab-indicator";
 @import "@material/tab/mdc-tab";
 
+@import "@material/floating-label/mdc-floating-label";
+@import "@material/line-ripple/mdc-line-ripple";
+@import "@material/notched-outline/mdc-notched-outline";
+@import "@material/textfield";
+
 // Foundation styles for base components and media queries
 @import "./base";
 
 // Internal Component styles
 @import "./vars/colors";
 @import "./vars/tabColors";
+@import "./vars/inputColors";
 @import "./components/logo";
 @import "./components/hero";
 @import "./components/footer";
@@ -21,3 +27,4 @@
 // Page styles
 @import "./pages/hours";
 @import "./pages/manifesto";
+@import "./pages/contact";
