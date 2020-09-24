@@ -1,60 +1,54 @@
+"use strict";
+
+import {MDCTextField} from '@material/textfield';
+
 const buildInput = (name) => {
-  // Build components and set attributes
-  const label = document.createElement('label');
-  label.setAttribute('class', 'mdc-text-field mdc-text-field--filled');
-  const rippleSpan = document.createElement('span');
-  rippleSpan.setAttribute('class', 'mdc-text-field__ripple');
+	// build components and put into holder
+  const holder = document.createElement('div');
+  holder.setAttribute('class', `input-group`);
   const input = document.createElement('input');
-  input.setAttribute('class', 'mdc-text-field__input');
   input.setAttribute('type', 'text');
-  input.setAttribute('aria-labelledby', 'my-label-id');
-  const labelSpan = document.createElement('span');
-  labelSpan.setAttribute('class', 'mdc-floating-label');
-  labelSpan.id = 'my-label-id';
-  labelSpan.innerHTML = `${name}`;
-  const lineRipple = document.createElement('span');
-  lineRipple.setAttribute('class', 'mdc-line-ripple');
+  input.setAttribute('class', `form-control ${name}-input`);
+  const label = document.createElement('label');
+  label.innerHTML = name;
+
+  input.addEventListener('focusout', (e) => {
+    if(e.target.textLength > 0) {
+      e.target.setAttribute('class', 'form-control has-value');
+    } else {
+      e.target.setAttribute('class', 'form-control');
+    }
+  })
 
 
-  // label.appendChild(rippleSpan);
-  label.appendChild(input);
-  label.appendChild(labelSpan);
-  label.appendChild(lineRipple);
+  holder.appendChild(input);
+  holder.appendChild(label);
 
-
-  return label;
-
+  return holder;
 }
-
-
-
 
 const buildTextArea = (name) => {
 
-    const label = document.createElement('label');
-    label.setAttribute('class', 'mdc-text-field mdc-text-field--filled mdc-text-field--textarea mdc-text-field--no-label');
+  const holder = document.createElement('div');
+  holder.setAttribute('class', 'input-group');
+  const textarea = document.createElement('textarea');
+  textarea.setAttribute('type', 'text');
+  textarea.setAttribute('class', 'form-control message-input');
+  const label = document.createElement('label');
+  label.innerHTML = name;
 
-    const rippleSpan = document.createElement('span');
-    rippleSpan.setAttribute('class', 'mdc-text-field__ripple');
-    const resizerSpan = document.createElement('span');
-    resizerSpan.setAttribute('class', 'mdc-text-field__resizer');
-    const input = document.createElement('input');
-    input.setAttribute('class', 'mdc-text-field__input');
-    input.setAttribute('rows', '8');
-    input.setAttribute('cols', '40');
-    const labelSpan = document.createElement('span');
-    labelSpan.setAttribute('class', 'mdc-floating-label');
-    // const lineRipple = document.createElement('span');
-    // labelSpan.setAttribute('class', 'mdc-line-ripple');
+  textarea.addEventListener('focusout', (e) => {
+    if(e.target.textLength > 0) {
+      e.target.setAttribute('class', 'form-control has-value');
+    } else {
+      e.target.setAttribute('class', 'form-control');
+    }
+  })
 
+  holder.appendChild(textarea);
+  holder.appendChild(label);
 
-    label.appendChild(rippleSpan);
-    label.appendChild(resizerSpan);
-    label.appendChild(input);
-    label.appendChild(labelSpan);
-    // label.appendChild(lineRipple);
-
-    return label
+  return holder;
 }
 
 export {

@@ -1,3 +1,5 @@
+"use strict";
+
 import Background from '../img/manifestoBackgroundClip.jpg';
 import renderLogo from '../components/renderLogo';
 import buildAboutUs from '../components/builders/buildAboutUs';

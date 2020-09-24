@@ -1,3 +1,5 @@
+"use strict";
+
 import {MDCTabBar} from '@material/tab-bar';
 
 // Update url to current tab name

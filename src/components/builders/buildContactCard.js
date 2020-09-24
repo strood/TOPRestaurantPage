@@ -1,3 +1,5 @@
+"use strict";
+
 import Phone from '../../img/call-black-18dp.svg';
 import {
   buildArticleCard,

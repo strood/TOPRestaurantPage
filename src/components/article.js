@@ -1,3 +1,4 @@
+"use strict";
 // Render an article holder
 const renderArticle = (content) => {
   let article = document.createElement('article');

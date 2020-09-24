@@ -1,3 +1,5 @@
+"use strict";
+
 import {
   buildArticleCard,
 } from '../article';

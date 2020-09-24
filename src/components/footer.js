@@ -1,3 +1,4 @@
+"use strict";
 const renderFooter = (body) => {
   let container = document.createElement('footer');
   container.setAttribute('class', 'footer');

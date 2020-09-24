@@ -1,3 +1,5 @@
+"use strict";
+
 import buildTab from './builders/buildTab';
 
 const renderNav = (content) => {

@@ -1,53 +1,61 @@
+"use strict";
 import {
   colorPicker,
 } from '../colors';
 import {
-  MDCTextField
-} from '@material/textfield';
-import {
   buildInput,
   buildTextArea,
 } from './buildInput';
+import {
+  sendEmail,
+} from '../../controllers/mailer';
 
 const buildMessageCard = (content) => {
   // Build and set component attributes
-  let form = document.createElement('form');
+  let form = document.createElement('div');
   form.setAttribute('class', 'contact-form');
 
+  // Add title to form
+  let formHeader = document.createElement('h3');
+  formHeader.innerHTML = "- Send Message -";
+  formHeader.style.color = colorPicker(4);
+
+  // Container w name and email input
+  let infoDiv = document.createElement('div');
+  infoDiv.setAttribute('class', 'infoDiv');
   let nameInput = buildInput('name');
-  let nameDiv = document.createElement('div');
   let emailInput = buildInput('email');
-  let emailDiv = document.createElement('div');
+  infoDiv.appendChild(nameInput);
+  infoDiv.appendChild(emailInput);
+
+  // Container w/ message textarea
   let messageInput = buildTextArea('message');
   let messageDiv = document.createElement('div');
-
-  console.log(nameInput)
-  console.log(emailInput)
-  console.log(messageInput)
-  nameDiv.appendChild(nameInput);
-  emailDiv.appendChild(emailInput);
+  messageDiv.setAttribute('class', 'messageDiv');
   messageDiv.appendChild(messageInput);
 
-  form.appendChild(nameDiv);
-  form.appendChild(emailDiv);
+  // Submit button
+  let submitButton = document.createElement('button');
+  submitButton.innerHTML = 'Submit';
+  submitButton.addEventListener('click', (e) => {
+    let ni = document.querySelector(".name-input");
+    let ei = document.querySelector(".email-input");
+    let mi = document.querySelector(".message-input");
+
+    console.log(e);
+    console.log(ni);
+    console.log(ei);
+    console.log(mi);
+  })
+
+  // Add components to form
+  form.appendChild(formHeader);
+  form.appendChild(infoDiv);
   form.appendChild(messageDiv);
+  form.appendChild(submitButton);
 
-//   let testText = document.createElement('div');
-//   form.innerHTML = `<label class="mdc-text-field mdc-text-field--filled">
-//   <span class="mdc-text-field__ripple"></span>
-//   <input class="mdc-text-field__input" type="text" aria-labelledby="my-label-id">
-//   <span class="mdc-floating-label" id="my-label-id">Hint text</span>
-//   <span class="mdc-line-ripple"></span>
-// </label>`;
-
-
-  // form.appendChild(testText)
-
+  // Add form to content
   content.appendChild(form);
-
-  console.log(form)
-
-
 
 }
 

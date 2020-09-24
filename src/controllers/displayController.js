@@ -1,3 +1,4 @@
+"use strict";
 // Imports
 import renderHours from '../pages/renderHours';
 import renderMenus from '../pages/renderMenus';

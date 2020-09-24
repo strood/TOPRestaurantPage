@@ -1,3 +1,5 @@
+"use strict";
+
 import Background from '../img/menuBackgroundClip.jpg';
 import {
   renderHero

@@ -1,3 +1,5 @@
+"use strict";
+
 import Background from '../img/contactBackground.jpg';
 import renderLogo from '../components/renderLogo';
 import buildEventCard from '../components/builders/buildEventCard';

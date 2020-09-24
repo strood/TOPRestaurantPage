@@ -1,3 +1,5 @@
+"use strict";
+
 // Build and about us section and append it to passed in article
 const buildAboutUs = (article) => {
   // Setup text sections

@@ -1,3 +1,5 @@
+"use strict";
+
 import renderNav from '../components/renderNav';
 import {renderFooter} from '../components/footer';
 import displayController from './displayController';

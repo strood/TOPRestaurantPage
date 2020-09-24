@@ -1,3 +1,4 @@
+"use strict";
 // Construct a hero image element and add to page
 const renderHero = (text, image, content, color) => {
 

@@ -1,3 +1,5 @@
+"use strict";
+
 import Background from '../img/hoursBackgroundClip.jpg';
 import buildHoursCard from '../components/builders/buildHoursCard';
 import buildAddressCard from '../components/builders/buildAddressCard';

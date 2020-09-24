@@ -1,3 +1,5 @@
+"use strict";
+
 // Build a nav tab w given name and index
 const buildTab = (name, index) => {
   // Build basic button /w attributes, set index to given index
@@ -34,7 +36,7 @@ const buildTab = (name, index) => {
   tab.appendChild(tabIndicator);
   tab.appendChild(tabRipple);
 
-  // return the completed tab 
+  // return the completed tab
   return tab;
 }
 

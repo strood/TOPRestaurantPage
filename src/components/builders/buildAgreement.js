@@ -1,3 +1,5 @@
+"use strict";
+
 // Build agreement section and append to passed in article
 const buildAgreement = (article) => {
   // Setup text sections

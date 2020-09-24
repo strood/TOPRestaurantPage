@@ -1,3 +1,5 @@
+"use strict";
+
 // A color list allowing us to cooridnate tab/page style colors
 // Color will be according to tab number, give tab number, receive color
 // Tabs go from 1-4.

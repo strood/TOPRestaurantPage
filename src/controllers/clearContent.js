@@ -1,3 +1,4 @@
+"use strict";
 // Reset #content for new page, returns our new content section to render in
 const clearContent = (body) => {
   // Grab old content and delete if present
