@@ -1,7 +1,5 @@
 "use strict";
 
-import {MDCTextField} from '@material/textfield';
-
 const buildInput = (name) => {
 	// build components and put into holder
   const holder = document.createElement('div');
@@ -19,7 +17,6 @@ const buildInput = (name) => {
       e.target.setAttribute('class', 'form-control');
     }
   })
-
 
   holder.appendChild(input);
   holder.appendChild(label);
@@ -39,6 +36,7 @@ const buildTextArea = (name) => {
 
   textarea.addEventListener('focusout', (e) => {
     if(e.target.textLength > 0) {
+      // NEED TO CHANGE THIS TO ONLY UPDATE NOT RESET CLASSES.
       e.target.setAttribute('class', 'form-control has-value');
     } else {
       e.target.setAttribute('class', 'form-control');

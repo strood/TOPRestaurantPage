@@ -6,9 +6,7 @@ import {
   buildInput,
   buildTextArea,
 } from './buildInput';
-import {
-  sendEmail,
-} from '../../controllers/mailer';
+import buildButton from './buildButton';
 
 const buildMessageCard = (content) => {
   // Build and set component attributes
@@ -35,18 +33,7 @@ const buildMessageCard = (content) => {
   messageDiv.appendChild(messageInput);
 
   // Submit button
-  let submitButton = document.createElement('button');
-  submitButton.innerHTML = 'Submit';
-  submitButton.addEventListener('click', (e) => {
-    let ni = document.querySelector(".name-input");
-    let ei = document.querySelector(".email-input");
-    let mi = document.querySelector(".message-input");
-
-    console.log(e);
-    console.log(ni);
-    console.log(ei);
-    console.log(mi);
-  })
+  let submitButton = buildButton();
 
   // Add components to form
   form.appendChild(formHeader);
