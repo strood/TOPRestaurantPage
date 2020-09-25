@@ -46,7 +46,7 @@ const renderContact = (content) => {
   buildMessageCard(content);
 
   // Insert google map into content so its width constrined
-  // buildMap(content);
+  buildMap(content);
 
   // Add logo to bottom of page
   renderLogo(content);

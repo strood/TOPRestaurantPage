@@ -6,6 +6,7 @@ const buildInput = (name) => {
   holder.setAttribute('class', `input-group`);
   const input = document.createElement('input');
   input.setAttribute('type', 'text');
+  input.setAttribute('name', name);
   input.setAttribute('class', `form-control ${name}-input`);
   const label = document.createElement('label');
   label.innerHTML = name;
@@ -30,13 +31,13 @@ const buildTextArea = (name) => {
   holder.setAttribute('class', 'input-group');
   const textarea = document.createElement('textarea');
   textarea.setAttribute('type', 'text');
+  textarea.setAttribute('name', name);
   textarea.setAttribute('class', 'form-control message-input');
   const label = document.createElement('label');
   label.innerHTML = name;
 
   textarea.addEventListener('focusout', (e) => {
     if(e.target.textLength > 0) {
-      // NEED TO CHANGE THIS TO ONLY UPDATE NOT RESET CLASSES.
       e.target.setAttribute('class', 'form-control has-value');
     } else {
       e.target.setAttribute('class', 'form-control');

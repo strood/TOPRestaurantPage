@@ -10,8 +10,11 @@ import buildButton from './buildButton';
 
 const buildMessageCard = (content) => {
   // Build and set component attributes
-  let form = document.createElement('div');
+  let form = document.createElement('form');
   form.setAttribute('class', 'contact-form');
+  // Set action to send our form info with formspree
+  form.setAttribute('action', 'https://formspree.io/xwkwpevn');
+  form.setAttribute('method', 'post');
 
   // Add title to form
   let formHeader = document.createElement('h3');
