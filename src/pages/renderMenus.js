@@ -2,7 +2,8 @@
 
 import Background from '../img/menuBackgroundClip.jpg';
 import {
-  renderHero
+  renderHero,
+  renderHeroMenu,
 } from '../components/hero';
 import {
   renderArticle
@@ -14,6 +15,8 @@ import renderLogo from '../components/renderLogo';
 import {
   colorPicker,
 } from '../components/colors';
+
+
 
 // Render menus page
 const renderMenus = (content) => {
@@ -28,6 +31,8 @@ const renderMenus = (content) => {
   renderArticle(content);
   let article = document.querySelector('article');
   article.setAttribute('class', 'menus-article');
+
+  renderHeroMenu();
 
 
   // Add logo to bottom of page

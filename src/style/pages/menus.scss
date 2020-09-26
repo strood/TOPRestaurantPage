@@ -1,0 +1,89 @@
+@import '../vars/colors.scss';
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  top: 60%;
+  left: 550px;
+  display: flex;
+  width: 20em;
+  height: 3em;
+  line-height: 3;
+  background-color: white;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  background-color: white;
+  cursor: pointer;
+}
+option {
+  background-color: white;
+  color: $purple;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: white;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: $purple;
+}
+
+@media only screen and (max-width: 1395px) {
+  .select {
+    left: 38%;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  .select {
+    left: 32%;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .select {
+    left: 26%;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .select {
+    left: 20%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .select {
+    left: 14%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .select {
+    left: 5%;
+  }
+}
