@@ -34,7 +34,6 @@ const renderMenus = (content) => {
 
   renderHeroMenu();
 
-
   // Add logo to bottom of page
   renderLogo(article);
 

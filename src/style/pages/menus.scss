@@ -1,5 +1,6 @@
 @import '../vars/colors.scss';
 
+// Dropdown menu styling-----------------
 /* Reset Select */
 select {
   -webkit-appearance: none;
@@ -36,7 +37,7 @@ select {
 }
 option {
   background-color: white;
-  color: $purple;
+  text-decoration-color: $purple;
 }
 /* Arrow */
 .select::after {
@@ -56,7 +57,27 @@ option {
 .select:hover::after {
   color: $purple;
 }
+// end of dropdown menu style---------------------------------------
 
+
+// Menus article, holder, and items--------------------------------
+.menus-article {
+  flex-direction: column;
+  h2 {
+    color: $purple;
+  }
+}
+
+
+.menu-holder {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 20vh;
+}
+
+
+// Media queries (mostly to center dropdown menu)
 @media only screen and (max-width: 1395px) {
   .select {
     left: 38%;

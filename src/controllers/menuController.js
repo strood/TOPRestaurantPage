@@ -1,49 +1,51 @@
 "use strict";
 // Imports
-// import renderHours from '../pages/renderHours';
-// import renderMenus from '../pages/renderMenus';
-// import renderManifesto from '../pages/renderManifesto';
-// import renderContact from '../pages/renderContact';
 import renderBrunch from '../menus/renderBrunch';
 import renderLunch from '../menus/renderLunch';
 import renderSmall from '../menus/renderSmall';
 import renderBig from '../menus/renderBig';
 import renderFlat from '../menus/renderFlat';
+import renderSweet from '../menus/renderSweet';
 import renderCoffee from '../menus/renderCoffee';
 
-import refreshMenu from '/refreshMenu';
-// import clearContent from './clearContent';
+import refreshMenu from './refreshMenu';
 
 // Given the index of the page, call approproate render function, passing
 // in the main body content it will render to.
-const displayController = (index) => {
+const menuController = (index) => {
 
-  // Reset #content for new page, returns our new content section
-  const body = document.querySelector('body');
-  let newContent = clearContent(body);
+  // Create new menu holder
+  const menuHolder = document.createElement('div');
+  menuHolder.setAttribute('class', 'menu-holder');
 
-  // Scroll to top of page
-  window.scrollTo(0, 0);
+  // Refresh menuArticle and append our new menuholder
+  refreshMenu(menuHolder);
 
-  // Render page based on index, update url to tab name
+  // Switch based on index pressed (menu chosen)
   switch (index) {
-    case (0):
-      renderHours(newContent);
-      updateURL(index);
+    case ("1"):
+      renderBrunch(menuHolder);
       break;
-    case (1):
-      renderMenus(newContent);
-      updateURL(index);
+    case ("2"):
+      renderLunch(menuHolder);
       break;
-    case (2):
-      renderManifesto(newContent);
-      updateURL(index);
+    case ("3"):
+      renderSmall(menuHolder);
       break;
-    case (3):
-      renderContact(newContent);
-      updateURL(index);
+    case ("4"):
+      renderBig(menuHolder);
+      break;
+    case ("5"):
+      renderFlat(menuHolder);
+      break;
+    case ("6"):
+      renderSweet(menuHolder);
+      break;
+    case ("7"):
+      renderCoffee(menuHolder);
       break;
   }
+
 }
 
 export default menuController;

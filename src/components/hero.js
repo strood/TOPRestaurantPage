@@ -1,4 +1,6 @@
 "use strict";
+import menuController from '../controllers/menuController';
+
 // Construct a hero image element and add to page
 const renderHero = (text, image, content, color) => {
 
@@ -28,15 +30,19 @@ const updateHeroPic = (image) => {
 
 // update background image of hero element
 const renderHeroMenu = () => {
+  // Grab hero to attatch to
   let imageDiv = document.querySelector('.hero-image');
 
+  // Dropdown holder
   let dropdown = document.createElement('div');
   dropdown.setAttribute('class', 'select');
 
+  // Select menu
   let select = document.createElement('select');
   select.setAttribute('name', 'slct');
   select.setAttribute('id', 'slct');
 
+  // Options
   let chooseOpt = document.createElement('option');
   chooseOpt.setAttribute('selected', "");
   chooseOpt.setAttribute('disabled', "");
@@ -63,7 +69,7 @@ const renderHeroMenu = () => {
   coffeeOpt.setAttribute('value', "7");
   coffeeOpt.innerHTML = "Coffee";
 
-
+  // Add options to dropdown
   select.appendChild(chooseOpt);
   select.appendChild(brunchOpt);
   select.appendChild(lunchOpt);
@@ -73,8 +79,18 @@ const renderHeroMenu = () => {
   select.appendChild(sweetOpt);
   select.appendChild(coffeeOpt);
 
+  for (var i = 1; i < select.children.length; i++) {
+    console.log(select.children[i]);
+    select.children[i].addEventListener('click', (e) => {
+      menuController(e.target.value);
+    })
+  }
+  console.log(select.children);
+
+  // Add to dropdown holder
   dropdown.appendChild(select);
 
+  // Add completed dropdown to hero
   imageDiv.appendChild(dropdown);
 }
 
