@@ -63,6 +63,7 @@ option {
 // Menus article, holder, and items--------------------------------
 .menus-article {
   flex-direction: column;
+  width: 100%;
   h2 {
     color: $purple;
   }
@@ -72,9 +73,53 @@ option {
 .menu-holder {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 20vh;
+  p {
+    display: flex;
+    width: 70%;
+    justify-content: center;
+  }
 }
+hr {
+  width: 100%;
+  height: 1px;
+  background-color: $purple;
+  border-color: $purple;
+}
+.menu-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 5%;
+}
+.menu-item-div {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 1%;
+  p {
+    justify-content: flex-start;
+  }
+}
+.menu-item-title-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.lunch-menu-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+.lunch-item-holder {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 
 
 // Media queries (mostly to center dropdown menu)

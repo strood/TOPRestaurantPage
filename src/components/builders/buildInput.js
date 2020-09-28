@@ -8,6 +8,8 @@ const buildInput = (name) => {
   input.setAttribute('type', 'text');
   input.setAttribute('name', name);
   input.setAttribute('class', `form-control ${name}-input`);
+  input.setAttribute('required', true);
+
   const label = document.createElement('label');
   label.innerHTML = name;
 
@@ -33,6 +35,8 @@ const buildTextArea = (name) => {
   textarea.setAttribute('type', 'text');
   textarea.setAttribute('name', name);
   textarea.setAttribute('class', 'form-control message-input');
+  textarea.setAttribute('required', true);
+
   const label = document.createElement('label');
   label.innerHTML = name;
 
