@@ -9,7 +9,7 @@ import {
 } from '../components/builders/menus';
 
 const renderBig = (menuHolder) => {
-  console.log("Hey from Big render");
+
   // Refresh hero image
   updateHeroPic(Background);
 
@@ -18,11 +18,11 @@ const renderBig = (menuHolder) => {
     " delicious, but they are also hardy. Our mains change every once in a while, but " +
     " we always use the finest ingredients we can source, favoring local & regional products wherever possible!");
 
-  // Build menu items
   // holder for menu items, so we can adjust independent from title.
   const menuDiv = document.createElement('div');
   menuDiv.setAttribute('class', 'menu-div');
 
+  // Build menu items
   let gojChick = buildMenuItem("gochujang chicken", "22", "korean-style chicken with coconut rice, topped with nori & sesame seed, served with kim chi slaw.");
   let macNCheese = buildMenuItem("crab and shrimp mac & cheese", "24", "panko crusted cheesey cavatappi, with crab and shrimp, and a side of arugula salad." +
     " topped with beet-pickled onion, and a slice of house-made buttered bread.");

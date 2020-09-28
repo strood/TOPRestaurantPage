@@ -7,6 +7,7 @@ import renderBig from '../menus/renderBig';
 import renderFlat from '../menus/renderFlat';
 import renderSweet from '../menus/renderSweet';
 import renderCoffee from '../menus/renderCoffee';
+import renderCocktails from '../menus/renderCocktails';
 
 import refreshMenu from './refreshMenu';
 
@@ -43,6 +44,9 @@ const menuController = (index) => {
       break;
     case ("7"):
       renderCoffee(menuHolder);
+      break;
+    case ("8"):
+      renderCocktails(menuHolder);
       break;
   }
 

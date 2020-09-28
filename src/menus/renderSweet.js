@@ -9,7 +9,6 @@ import {
 } from '../components/builders/menus';
 
 const renderSweet = (menuHolder) => {
-  console.log("Hey from Sweet render");
 
   // Refresh hero image
   updateHeroPic(Background);
@@ -19,11 +18,11 @@ const renderSweet = (menuHolder) => {
     "and love, we’ve got just the right amount of sweetness to top things off. Try a" +
     " coffee and one of our house made desserts.");
 
-  // Build menu items
   // holder for menu items, so we can adjust independent from title.
   const menuDiv = document.createElement('div');
   menuDiv.setAttribute('class', 'menu-div');
 
+  // Build menu items
   let chocoCake = buildMenuItem("mashed potato chocolate cake with penuche icing", "9", "seriously, a rich chocolate cake," +
     " with walnuts, and a brown sugar fudge icing.");
   let shortBread = buildMenuItem("cheddar shortbread with spiced apple", "9", "very traditional Scottish shortbread right off the Canada" +

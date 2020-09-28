@@ -7,7 +7,7 @@ const buildMenuTitle = (titleText, blurbText) => {
   let title = document.createElement('h2');
   title.innerHTML = titleText;
   menuArticle.appendChild(title);
-
+  // Blurb for each menu section
   let blurb = document.createElement('p')
   blurb.innerHTML = blurbText;
   menuArticle.appendChild(blurb);

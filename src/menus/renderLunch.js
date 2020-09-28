@@ -9,13 +9,12 @@ import {
 } from '../components/builders/menus';
 
 const renderLunch = (menuHolder) => {
-  console.log("Hey from Lunch render");
+
   // Refresh hero image
   updateHeroPic(Background);
 
   // Render title on page
   buildMenuTitle("Lunch", "Yes, we are now open for lunch at 11:30a.m, Tuesday through Sunday");
-
 
   // holder for menu items, so we can adjust independent from title.
   // Lunch is different form all other pages as we have 3 titles and 3 boxes,
@@ -73,11 +72,6 @@ const renderLunch = (menuHolder) => {
     " onion, mozzarella, tomato basil sauce.");
   let saltLick = buildMenuItem("salt lick", "12", "caramelized onion, tapenade, capers, mozzarella.", ["add proscuitto $3"]);
 
-  // Append items to columns
-
-
-  // Append columns to page
-
   // starter div
   let sHolder = document.createElement('div');
   sHolder.setAttribute('class', "lunch-item-holder");
@@ -113,7 +107,7 @@ const renderLunch = (menuHolder) => {
   flatDiv.appendChild(fHolder);
 
 
-  // Add our div to holder
+  // Add our divs to holder with breaks
   menuHolder.appendChild(startDiv);
   menuHolder.appendChild(document.createElement('hr'));
   menuHolder.appendChild(entreeDiv);

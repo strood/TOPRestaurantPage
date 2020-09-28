@@ -9,7 +9,7 @@ import {
 } from '../components/builders/menus';
 
 const renderSmall = (menuHolder) => {
-  console.log("Hey from Small render");
+
   // Refresh hero image
   updateHeroPic(Background);
 
@@ -19,7 +19,6 @@ const renderSmall = (menuHolder) => {
     " We are working hard to make the chef’s board the best collection of charcuterie," +
     " cheese, and goodies to nibble on, in the region. Help us propagate that rumour" +
     " with your social media prowess and natural charm... You’ll be rewarded!");
-
 
   // holder for menu items, so we can adjust independent from title.
   const menuDiv = document.createElement('div');
@@ -58,7 +57,6 @@ const renderSmall = (menuHolder) => {
 
   // Add our div to holder
   menuHolder.appendChild(menuDiv);
-
 }
 
 export default renderSmall;

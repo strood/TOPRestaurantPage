@@ -9,7 +9,7 @@ import {
 } from '../components/builders/menus';
 
 const renderBrunch = (menuHolder) => {
-  console.log("Hey from Brunch render")
+
   // Refresh hero image
   updateHeroPic(Background);
 

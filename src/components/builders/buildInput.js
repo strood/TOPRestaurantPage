@@ -13,6 +13,7 @@ const buildInput = (name) => {
   const label = document.createElement('label');
   label.innerHTML = name;
 
+  // Add event listener to know to adjust label text if we have entered anything
   input.addEventListener('focusout', (e) => {
     if(e.target.textLength > 0) {
       e.target.setAttribute('class', 'form-control has-value');
@@ -28,7 +29,7 @@ const buildInput = (name) => {
 }
 
 const buildTextArea = (name) => {
-
+  // Create eleements to append to holder
   const holder = document.createElement('div');
   holder.setAttribute('class', 'input-group');
   const textarea = document.createElement('textarea');
@@ -40,6 +41,7 @@ const buildTextArea = (name) => {
   const label = document.createElement('label');
   label.innerHTML = name;
 
+  // Add event listener to know to adjust label text if we have entered anything 
   textarea.addEventListener('focusout', (e) => {
     if(e.target.textLength > 0) {
       e.target.setAttribute('class', 'form-control has-value');

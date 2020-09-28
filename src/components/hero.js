@@ -68,6 +68,9 @@ const renderHeroMenu = () => {
   let coffeeOpt = document.createElement('option');
   coffeeOpt.setAttribute('value', "7");
   coffeeOpt.innerHTML = "Coffee";
+  let cocktailOpt = document.createElement('option');
+  cocktailOpt.setAttribute('value', "8");
+  cocktailOpt.innerHTML = "Cocktails";
 
   // Add options to dropdown
   select.appendChild(chooseOpt);
@@ -78,14 +81,14 @@ const renderHeroMenu = () => {
   select.appendChild(flatOpt);
   select.appendChild(sweetOpt);
   select.appendChild(coffeeOpt);
+  select.appendChild(cocktailOpt);
 
+  // Add listener to each select option to trigger menu controlelr when clicked.
   for (var i = 1; i < select.children.length; i++) {
-    console.log(select.children[i]);
     select.children[i].addEventListener('click', (e) => {
       menuController(e.target.value);
     })
   }
-  console.log(select.children);
 
   // Add to dropdown holder
   dropdown.appendChild(select);

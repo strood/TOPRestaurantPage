@@ -12,8 +12,9 @@ const {
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
-  // Added only for dev! dont need below line:
-  mode: 'development',
+  // swap to dev mode if developing
+  // mode: 'development',
+  mode: 'production',
   entry: {
     app: './src/index.js',
     // print: './src/print.js', No second file present yet, add more here

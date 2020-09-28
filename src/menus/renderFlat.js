@@ -9,14 +9,13 @@ import {
 } from '../components/builders/menus';
 
 const renderFlat = (menuHolder) => {
-  console.log("Hey from Flat render");
+
   // Refresh hero image
   updateHeroPic(Background);
 
   // Render title on page
   buildMenuTitle("Flat Plates", "The secret is in our flakey, house made crust." +
   " Atop it sits a flavorful array of mouthwatering toppings, baked to perfection.");
-
 
   // Build menu items
   // holder for menu items, so we can adjust independent from title.
@@ -38,7 +37,6 @@ const renderFlat = (menuHolder) => {
   let copenhag = buildMenuItem("copenhagen", "15", "thinly sliced potato, smoked cheddar, proscuitto");
 
   // Append items to page
-
   menuDiv.appendChild(snapDres);
   menuDiv.appendChild(ecMac);
   menuDiv.appendChild(sprout);
