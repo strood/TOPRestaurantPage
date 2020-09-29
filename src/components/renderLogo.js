@@ -1,6 +1,6 @@
 "use strict";
 
-import Logo from '../img/logo.png';
+import Logo from '../img/logo.jpg';
 const renderLogo = (content) => {
   let img = document.createElement('div');
   img.setAttribute('class', 'logo-div');

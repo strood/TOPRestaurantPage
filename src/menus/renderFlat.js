@@ -1,5 +1,5 @@
 "use strict";
-import Background from '../img/TribePizza2.jpg';
+import Background from '../img/TribeZa.jpg';
 import {
   updateHeroPic
 } from '../components/hero';
