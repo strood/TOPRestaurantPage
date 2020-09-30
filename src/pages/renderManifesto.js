@@ -2,6 +2,7 @@
 
 import Background from '../img/manifestoBackgroundClip.jpg';
 import renderLogo from '../components/renderLogo';
+import renderSocials from '../components/renderSocials';
 import buildAboutUs from '../components/builders/buildAboutUs';
 import buildAgreement from '../components/builders/buildAgreement';
 import {
@@ -41,6 +42,9 @@ const renderManifesto = (content) => {
   renderArticleTitle('Agreement', colorPicker(3));
   // Builds agreement section and appends to passed in article
   buildAgreement(article);
+
+  // Add social media links to bottom of page
+  renderSocials(article, colorPicker(3));
 
   // Add logo to bottom of page
   renderLogo(article);

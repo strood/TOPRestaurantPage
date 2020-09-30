@@ -1,6 +1,7 @@
 "use strict";
 
 import Background from '../img/contactBackground.jpg';
+import renderSocials from '../components/renderSocials';
 import renderLogo from '../components/renderLogo';
 import buildEventCard from '../components/builders/buildEventCard';
 import buildContactCard from '../components/builders/buildContactCard';
@@ -47,6 +48,9 @@ const renderContact = (content) => {
 
   // Insert google map into content so its width constrined
   buildMap(content);
+
+  // Add social media links to bottom of page
+  renderSocials(content, colorPicker(4));
 
   // Add logo to bottom of page
   renderLogo(content);

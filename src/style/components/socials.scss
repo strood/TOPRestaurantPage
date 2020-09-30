@@ -1,0 +1,12 @@
+.socials-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-self: center;
+  width: 100px;
+  height: 50px;
+  margin: 1%;
+  a {
+    font-size: 40px;
+  }
+}

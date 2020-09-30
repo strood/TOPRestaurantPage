@@ -5,6 +5,7 @@ import pageLoad from './controllers/pageLoad';
 // Import styles
 import './style/reset.scss';
 import './style/style.scss';
+import '@fortawesome/fontawesome-free/js/all'
 
 // On pageload, check url to see if page queried, navigate to given page, or hours
 //  as default

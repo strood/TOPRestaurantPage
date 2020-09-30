@@ -26,7 +26,7 @@ const renderCoffee = (menuHolder) => {
   let latte = buildMenuItem("latte", "5", "one long espresso shot, in a tall cup with steamed milk.");
   let cappuccino =buildMenuItem("cappuccino", "5", "one long espresso shot, in a short cup with steamed milk and microfoam.");
   let teaLatte = buildMenuItem("tea latte", "5", "tea, in a tall cup with steamed milk.");
-  let slowCof = buildMenuItem("slow coffee", "8", "pour-over, slow coffe, fit for two.");
+  let slowCof = buildMenuItem("slow coffee", "8", "pour-over, slow coffee, fit for two.");
   let mocha = buildMenuItem("caffee mocha", "5", "latte with chocolate");
 
   // Append items to page

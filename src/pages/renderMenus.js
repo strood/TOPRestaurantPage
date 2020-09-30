@@ -11,6 +11,7 @@ import {
 import {
   changeFooterColor
 } from '../components/footer';
+import renderSocials from '../components/renderSocials';
 import renderLogo from '../components/renderLogo';
 import {
   colorPicker,
@@ -32,7 +33,11 @@ const renderMenus = (content) => {
   let article = document.querySelector('article');
   article.setAttribute('class', 'menus-article');
 
+  // Render menu dropdown in hero
   renderHeroMenu();
+
+  // Add social media links to bottom of page
+  renderSocials(article, colorPicker(2));
 
   // Add logo to bottom of page
   renderLogo(article);

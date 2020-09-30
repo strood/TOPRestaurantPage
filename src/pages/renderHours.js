@@ -13,6 +13,7 @@ import {
 import {
   renderArticle,
 } from '../components/article';
+import renderSocials from '../components/renderSocials';
 import renderLogo from '../components/renderLogo';
 import {
   colorPicker,
@@ -42,6 +43,9 @@ const renderHours = (content) => {
 
   // Build hours card
   buildHoursCard(article);
+
+  // Add social media links to bottom of page
+  renderSocials(content, colorPicker(1));
 
   // Add logo to bottom of page
   renderLogo(content);
