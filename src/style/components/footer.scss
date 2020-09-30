@@ -1,9 +1,12 @@
 footer {
   display: flex;
+  justify-content: space-between;
   width: 100%;
   background-color: $grey;
   padding: 0.5% 0%;
+
   p {
     padding-left: 1%;
+    padding-right: 1%;
   }
 }
