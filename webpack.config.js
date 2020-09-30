@@ -21,7 +21,7 @@ module.exports = {
   },
   devtool: 'inline-source-map',
   // Below line tells webpack-dev-server to server files from /dist directory on
-  //  localhost:8080
+  //  localhost:8080(or port set in servr.js)
   //  run using webpack-dev-server --open or script in package.json $ npm run start
   devServer: {
     contentBase: './dist',
