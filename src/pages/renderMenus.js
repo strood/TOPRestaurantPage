@@ -1,15 +1,13 @@
-"use strict";
-
 import Background from '../img/menuBackgroundClip.jpg';
 import {
   renderHero,
   renderHeroMenu,
 } from '../components/hero';
 import {
-  renderArticle
+  renderArticle,
 } from '../components/article';
 import {
-  changeFooterColor
+  changeFooterColor,
 } from '../components/footer';
 import renderSocials from '../components/renderSocials';
 import renderLogo from '../components/renderLogo';
@@ -17,12 +15,10 @@ import {
   colorPicker,
 } from '../components/colors';
 
-
-
 // Render menus page
 const renderMenus = (content) => {
   // Set our hero vars for our menus page
-  const heroText = "MENUS";
+  const heroText = 'MENUS';
   const heroURL = Background;
 
   // Builds a hero element with the text, background image, and appends to our content
@@ -30,11 +26,14 @@ const renderMenus = (content) => {
 
   // render article and grab it
   renderArticle(content);
-  let article = document.querySelector('article');
+  const article = document.querySelector('article');
   article.setAttribute('class', 'menus-article');
 
   // Render menu dropdown in hero
   renderHeroMenu();
+
+  const select = document.querySelector('#slct');
+  select.setAttribute('onchange', 'menuController(this.value)');
 
   // Add social media links to bottom of page
   renderSocials(article, colorPicker(2));
@@ -44,7 +43,6 @@ const renderMenus = (content) => {
 
   // Update footer color
   changeFooterColor(colorPicker(2));
-
-}
+};
 
 export default renderMenus;

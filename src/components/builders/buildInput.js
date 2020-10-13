@@ -1,9 +1,7 @@
-"use strict";
-
 const buildInput = (name) => {
-	// build components and put into holder
+  // build components and put into holder
   const holder = document.createElement('div');
-  holder.setAttribute('class', `input-group`);
+  holder.setAttribute('class', 'input-group');
   const input = document.createElement('input');
   input.setAttribute('type', 'text');
   input.setAttribute('name', name);
@@ -15,18 +13,18 @@ const buildInput = (name) => {
 
   // Add event listener to know to adjust label text if we have entered anything
   input.addEventListener('focusout', (e) => {
-    if(e.target.textLength > 0) {
+    if (e.target.textLength > 0) {
       e.target.setAttribute('class', 'form-control has-value');
     } else {
       e.target.setAttribute('class', 'form-control');
     }
-  })
+  });
 
   holder.appendChild(input);
   holder.appendChild(label);
 
   return holder;
-}
+};
 
 const buildTextArea = (name) => {
   // Create eleements to append to holder
@@ -41,20 +39,20 @@ const buildTextArea = (name) => {
   const label = document.createElement('label');
   label.innerHTML = name;
 
-  // Add event listener to know to adjust label text if we have entered anything 
+  // Add event listener to know to adjust label text if we have entered anything
   textarea.addEventListener('focusout', (e) => {
-    if(e.target.textLength > 0) {
+    if (e.target.textLength > 0) {
       e.target.setAttribute('class', 'form-control has-value');
     } else {
       e.target.setAttribute('class', 'form-control');
     }
-  })
+  });
 
   holder.appendChild(textarea);
   holder.appendChild(label);
 
   return holder;
-}
+};
 
 export {
   buildInput,

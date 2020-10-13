@@ -1,13 +1,10 @@
-"use strict";
-
+import { MDCTabBar } from '@material/tab-bar';
 import renderNav from '../components/renderNav';
-import {renderFooter} from '../components/footer';
+import { renderFooter } from '../components/footer';
 import displayController from './displayController';
-import {MDCTabBar} from '@material/tab-bar';
 
 // Basic page element setup, load nav and activate our landing page
 const pageLoad = (i = 0) => {
-
   // Whole page holder
   const body = document.querySelector('body');
 
@@ -27,12 +24,10 @@ const pageLoad = (i = 0) => {
   body.addEventListener('MDCTabBar:activated', (e) => {
     // Pass along index of event to controller ot render associated body
     displayController(e.detail.index);
-  })
-
+  });
   // Grab tabBar and activate our desired landing page (Hours in our case)
   const tabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
-  tabBar.activateTab(i); //trigger default activate on load.
-
-}
+  tabBar.activateTab(i); // trigger default activate on load.
+};
 
 export default pageLoad;

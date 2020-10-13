@@ -1,4 +1,3 @@
-"use strict";
 // Imports
 import renderBrunch from '../menus/renderBrunch';
 import renderLunch from '../menus/renderLunch';
@@ -14,7 +13,6 @@ import refreshMenu from './refreshMenu';
 // Given the index of the page, call approproate render function, passing
 // in the main body content it will render to.
 const menuController = (index) => {
-
   // Create new menu holder
   const menuHolder = document.createElement('div');
   menuHolder.setAttribute('class', 'menu-holder');
@@ -24,32 +22,33 @@ const menuController = (index) => {
 
   // Switch based on index pressed (menu chosen)
   switch (index) {
-    case ("1"):
+    case ('1'):
       renderBrunch(menuHolder);
       break;
-    case ("2"):
+    case ('2'):
       renderLunch(menuHolder);
       break;
-    case ("3"):
+    case ('3'):
       renderSmall(menuHolder);
       break;
-    case ("4"):
+    case ('4'):
       renderBig(menuHolder);
       break;
-    case ("5"):
+    case ('5'):
       renderFlat(menuHolder);
       break;
-    case ("6"):
+    case ('6'):
       renderSweet(menuHolder);
       break;
-    case ("7"):
+    case ('7'):
       renderCoffee(menuHolder);
       break;
-    case ("8"):
+    case ('8'):
       renderCocktails(menuHolder);
       break;
+    default:
+      break;
   }
-
-}
+};
 
 export default menuController;

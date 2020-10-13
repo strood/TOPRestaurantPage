@@ -1,4 +1,3 @@
-"use strict";
 // Imports
 import renderHours from '../pages/renderHours';
 import renderMenus from '../pages/renderMenus';
@@ -11,10 +10,9 @@ import clearContent from './clearContent';
 // Given the index of the page, call approproate render function, passing
 // in the main body content it will render to.
 const displayController = (index) => {
-
   // Reset #content for new page, returns our new content section
   const body = document.querySelector('body');
-  let newContent = clearContent(body);
+  const newContent = clearContent(body);
 
   // Scroll to top of page
   window.scrollTo(0, 0);
@@ -37,7 +35,9 @@ const displayController = (index) => {
       renderContact(newContent);
       updateURL(index);
       break;
+    default:
+      break;
   }
-}
+};
 
 export default displayController;

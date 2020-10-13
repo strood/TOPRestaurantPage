@@ -1,8 +1,6 @@
-"use strict";
-
 const refreshMenu = (menu) => {
   // Grab article to build menus in
-  let menuArticle = document.querySelector('.menus-article');
+  const menuArticle = document.querySelector('.menus-article');
 
   // Empty existing menu if there
   if (document.querySelector('.menu-holder')) {
@@ -11,6 +9,6 @@ const refreshMenu = (menu) => {
   }
   // Append the fresh menu-holder passed in.
   menuArticle.insertBefore(menu, menuArticle.childNodes[0]);
-}
+};
 
 export default refreshMenu;

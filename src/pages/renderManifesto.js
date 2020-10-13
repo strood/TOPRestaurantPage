@@ -1,19 +1,17 @@
-"use strict";
-
 import Background from '../img/manifestoBackgroundClip.jpg';
 import renderLogo from '../components/renderLogo';
 import renderSocials from '../components/renderSocials';
 import buildAboutUs from '../components/builders/buildAboutUs';
 import buildAgreement from '../components/builders/buildAgreement';
 import {
-  renderHero
+  renderHero,
 } from '../components/hero';
 import {
   renderArticle,
   renderArticleTitle,
 } from '../components/article';
 import {
-  changeFooterColor
+  changeFooterColor,
 } from '../components/footer';
 import {
   colorPicker,
@@ -22,7 +20,7 @@ import {
 // Render manifesto page
 const renderManifesto = (content) => {
   // Set our hero vars for our manifesto page
-  const heroText = "MANISFESTO";
+  const heroText = 'MANISFESTO';
   const heroURL = Background;
 
   // Builds a hero element with the text, background image, and appends to our content
@@ -30,7 +28,7 @@ const renderManifesto = (content) => {
 
   // Render article and grab it
   renderArticle(content);
-  let article = document.querySelector('article');
+  const article = document.querySelector('article');
   article.setAttribute('class', 'manifesto-article');
 
   // Build about us section
@@ -50,6 +48,6 @@ const renderManifesto = (content) => {
   renderLogo(article);
   // Update footer color
   changeFooterColor(colorPicker(3));
-}
+};
 
 export default renderManifesto;

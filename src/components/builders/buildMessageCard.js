@@ -1,4 +1,3 @@
-"use strict";
 import {
   colorPicker,
 } from '../colors';
@@ -10,33 +9,33 @@ import buildButton from './buildButton';
 
 const buildMessageCard = (content) => {
   // Build and set component attributes
-  let form = document.createElement('form');
+  const form = document.createElement('form');
   form.setAttribute('class', 'contact-form');
   // Set action to send our form info with formspree
   form.setAttribute('action', 'https://formspree.io/xwkwpevn');
   form.setAttribute('method', 'post');
 
   // Add title to form
-  let formHeader = document.createElement('h3');
-  formHeader.innerHTML = "- Send Message -";
+  const formHeader = document.createElement('h3');
+  formHeader.innerHTML = '- Send Message -';
   formHeader.style.color = colorPicker(4);
 
   // Container w name and email input
-  let infoDiv = document.createElement('div');
+  const infoDiv = document.createElement('div');
   infoDiv.setAttribute('class', 'infoDiv');
-  let nameInput = buildInput('name');
-  let emailInput = buildInput('email');
+  const nameInput = buildInput('name');
+  const emailInput = buildInput('email');
   infoDiv.appendChild(nameInput);
   infoDiv.appendChild(emailInput);
 
   // Container w/ message textarea
-  let messageInput = buildTextArea('message');
-  let messageDiv = document.createElement('div');
+  const messageInput = buildTextArea('message');
+  const messageDiv = document.createElement('div');
   messageDiv.setAttribute('class', 'messageDiv');
   messageDiv.appendChild(messageInput);
 
   // Submit button
-  let submitButton = buildButton();
+  const submitButton = buildButton();
 
   // Add components to form
   form.appendChild(formHeader);
@@ -46,7 +45,6 @@ const buildMessageCard = (content) => {
 
   // Add form to content
   content.appendChild(form);
-
-}
+};
 
 export default buildMessageCard;

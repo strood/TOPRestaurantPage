@@ -1,11 +1,13 @@
-"use strict";
 // Import methods/functionality
 import pageLoad from './controllers/pageLoad';
-
-// Import styles
+import menuController from './controllers/menuController';
 import './style/reset.scss';
 import './style/style.scss';
-import '@fortawesome/fontawesome-free/js/all'
+import '@fortawesome/fontawesome-free/js/all';
+
+window.menuController = menuController;
+
+// Import styles
 
 // On pageload, check url to see if page queried, navigate to given page, or hours
 //  as default
@@ -18,6 +20,7 @@ switch (queryString) {
     break;
   case ('?menus'):
     pageLoad(1);
+
     break;
   case ('?manifesto'):
     pageLoad(2);
@@ -26,5 +29,5 @@ switch (queryString) {
     pageLoad(3);
     break;
   default:
-  document.onload = pageLoad(0);
+    document.onload = pageLoad(0);
 }

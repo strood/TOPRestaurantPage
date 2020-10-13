@@ -38,6 +38,7 @@ select {
 option {
   background-color: white;
   text-decoration-color: $purple;
+  z-index: 3;
 }
 /* Arrow */
 .select::after {

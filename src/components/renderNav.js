@@ -1,5 +1,3 @@
-"use strict";
-
 import buildTab from './builders/buildTab';
 
 const renderNav = (content) => {
@@ -7,29 +5,27 @@ const renderNav = (content) => {
   // passed in
 
   // Make tabBar
-  let tabBar = document.createElement('div');
+  const tabBar = document.createElement('div');
   tabBar.setAttribute('class', 'mdc-tab-bar');
   tabBar.setAttribute('role', 'tablist');
 
   // Make tabScroller
-  let tabScroller = document.createElement('div');
+  const tabScroller = document.createElement('div');
   tabScroller.setAttribute('class', 'mdc-tab-scroller');
 
   // Make tabScrollerSa
-  let tabScrollerSa = document.createElement('div');
+  const tabScrollerSa = document.createElement('div');
   tabScrollerSa.setAttribute('class', 'mdc-tab-scroller__scroll-area');
 
   // Make tabScrollerSc
-  let tabScrollerSc = document.createElement('div');
+  const tabScrollerSc = document.createElement('div');
   tabScrollerSc.setAttribute('class', 'mdc-tab-scroller__scroll-content');
 
-
   // Build tabs for menu, passing in the tab name we want and index
-  let aboutTab = buildTab('hours', 0);
-  let menusTab = buildTab('menus', 1);
-  let manifestoTab = buildTab('manifesto', 2);
-  let contactTab = buildTab('contact', 3);
-
+  const aboutTab = buildTab('hours', 0);
+  const menusTab = buildTab('menus', 1);
+  const manifestoTab = buildTab('manifesto', 2);
+  const contactTab = buildTab('contact', 3);
 
   // Add new buttons to our
   tabScrollerSc.appendChild(aboutTab);
@@ -45,7 +41,6 @@ const renderNav = (content) => {
 
   // Add our completed nav/tab Bar to the content div passed in.
   content.appendChild(tabBar);
-
-}
+};
 
 export default renderNav;
